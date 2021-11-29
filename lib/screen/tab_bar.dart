@@ -12,9 +12,16 @@ class TabBarScreen extends StatelessWidget {
       length: Strings.name.length,
       child: Scaffold(
         appBar: AppBar(
-          title: const Text(Strings.title),
+          backgroundColor: Colors.white,
+          title: const Text(
+            Strings.title,
+            style: TextStyle(color: Colors.black),
+          ),
           bottom: const TabBar(
+            indicatorWeight: 4.0,
+            indicatorColor: Colors.blue,
             tabs: Strings.name,
+            labelColor: Colors.black,
           ),
         ),
         body: const TabBarView(

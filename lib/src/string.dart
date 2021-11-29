@@ -12,7 +12,9 @@ class Strings {
   static const String loading = "Loading";
   static const String title = "Watchlist";
   static const List<Tab> name = <Tab>[
-    Tab(text: "Contact 1"),
+    Tab(
+      text: "Contact 1",
+    ),
     Tab(text: "Contact 2"),
     Tab(
       text: 'Contact 3',

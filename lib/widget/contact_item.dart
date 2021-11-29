@@ -3,7 +3,7 @@ import 'package:flutter/rendering.dart';
 
 import 'package:watchlist_bloc_lib/model/contact_data_model.dart';
 
-Widget contactlist(BuildContext context, List<Contact> contactdata) {
+Widget listItem(BuildContext context, List<Contact> contactdata) {
   return Container(
     padding: const EdgeInsets.only(top: 15),
     height: MediaQuery.of(context).size.height,
@@ -37,6 +37,7 @@ Widget userList(
         Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               Text(
                 name,

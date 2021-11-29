@@ -42,7 +42,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                 if (contactdata == []) {
                   return const Text(Strings.loading);
                 } else {
-                  return contactlist(context, contactdata);
+                  return listItem(context, contactdata);
                 }
               } else if (state is ContactError) {
                 return const Text(Strings.unknownError);

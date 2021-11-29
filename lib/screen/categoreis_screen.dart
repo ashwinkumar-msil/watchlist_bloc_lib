@@ -33,27 +33,23 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
           child: Container(
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,
-            child: Stack(
-              children: <Widget>[
-                BlocBuilder<WatchlistBloc, WatchlistState>(
-                    builder: (BuildContext context, WatchlistState state) {
-                  if (state is Contactblocloading) {
-                    return const Text(Strings.loading);
-                  } else if (state is ContactFetchData) {
-                    List<Contact> contactdata = state.contacts;
-                    if (contactdata == []) {
-                      return const Text(Strings.loading);
-                    } else {
-                      return contactlist(context, contactdata);
-                    }
-                  } else if (state is ContactError) {
-                    return const Text(Strings.unknownError);
-                  } else {
-                    return const Text(Strings.unknownError);
-                  }
-                })
-              ],
-            ),
+            child: BlocBuilder<WatchlistBloc, WatchlistState>(
+                builder: (BuildContext context, WatchlistState state) {
+              if (state is Contactblocloading) {
+                return const Text(Strings.loading);
+              } else if (state is ContactFetchData) {
+                List<Contact> contactdata = state.contacts;
+                if (contactdata == []) {
+                  return const Text(Strings.loading);
+                } else {
+                  return contactlist(context, contactdata);
+                }
+              } else if (state is ContactError) {
+                return const Text(Strings.unknownError);
+              } else {
+                return const Text(Strings.unknownError);
+              }
+            }),
           ),
         )));
   }

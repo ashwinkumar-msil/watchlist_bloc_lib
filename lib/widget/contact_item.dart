@@ -49,21 +49,6 @@ Widget userList(
               const SizedBox(
                 height: 6,
               ),
-              // Row(
-              //   children: <Widget>[
-              //     const SizedBox(
-              //       width: 5,
-              //     ),
-              //     Text(ContactData[index]['id'],
-              //         style: const TextStyle(
-              //             color: Colors.black,
-              //             fontSize: 13,
-              //             letterSpacing: .3)),
-              //   ],
-              // ),
-              // const SizedBox(
-              //   height: 6,
-              // ),
               Row(
                 children: <Widget>[
                   const SizedBox(

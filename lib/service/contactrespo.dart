@@ -10,7 +10,6 @@ class ContactService {
     ApiNetwork network = ApiNetwork();
     final response = await network.get(Strings.contactUrl);
     contactdata = contactFromJson(response);
-
     return contactdata;
   }
 }

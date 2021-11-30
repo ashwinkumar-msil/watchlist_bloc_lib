@@ -1,6 +1,5 @@
 class NoInternetException {
-  var msg;
-  NoInternetException(this.msg);
+  NoInternetException(String msg);
 }
 
 class NoServiceFoundException {

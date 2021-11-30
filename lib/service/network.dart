@@ -23,16 +23,16 @@ class ApiNetwork {
       throw Exception(Strings.noData);
     }
     switch (response.statusCode) {
-      case 445:
+    
       case 200:
         var responseJson = response.body;
         return responseJson;
       case 400:
-        throw BadRequestException(response.body.toString());
-      case 401:
+        throw BadRequestException(response.body);
+   
 
       case 403:
-        throw UnauthorisedException(response.body.toString());
+        throw UnauthorisedException(response.body);
       case 500:
 
       default:

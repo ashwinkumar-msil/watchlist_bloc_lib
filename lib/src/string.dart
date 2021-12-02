@@ -11,13 +11,27 @@ class Strings {
   static const String unknownError = "Something Went Wrong";
   static const String loading = "Loading";
   static const String title = "Watchlist";
+  static const String appTitle = "Flutter";
   static const List<Tab> name = <Tab>[
     Tab(
-      text: "Contact 1",
-    ),
-    Tab(text: "Contact 2"),
+        child: (Text(
+      "Contact 1",
+      style: TextStyle(fontSize: 14),
+    ))),
     Tab(
-      text: 'Contact 3',
-    )
+        child: (Text(
+      "Contact 2",
+      style: TextStyle(fontSize: 14),
+    ))),
+    Tab(
+        child: (Text(
+      "Contact 3",
+      style: TextStyle(fontSize: 14),
+    ))),
+    Tab(
+        child: (Text(
+      "Contact 4",
+      style: TextStyle(fontSize: 14),
+    ))),
   ];
 }

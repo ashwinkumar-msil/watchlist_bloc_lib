@@ -9,7 +9,7 @@ Widget listItem(BuildContext context, List<Contact> contactdata) {
     height: MediaQuery.of(context).size.height,
     width: double.infinity,
     child: ListView.builder(
-        itemCount: contactdata.length == null ? 0 : contactdata.length,
+        itemCount: contactdata.length,
         itemBuilder: (
           BuildContext context,
           int i,
@@ -24,9 +24,15 @@ Widget userList(
     BuildContext context, int index, String name, String number, String url) {
   return Container(
     decoration: const BoxDecoration(
-      borderRadius: BorderRadius.all(Radius.circular(10)),
-      color: Colors.white,
-    ),
+        borderRadius: BorderRadius.all(Radius.circular(5)),
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey,
+            offset: Offset(0.0, 1.0), //(x,y)
+            blurRadius: 1.0,
+          ),
+        ]),
     width: double.infinity,
     height: 80,
     margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
@@ -57,7 +63,7 @@ Widget userList(
                   Text(number,
                       style: const TextStyle(
                           color: Colors.black,
-                          fontSize: 13,
+                          fontSize: 15,
                           letterSpacing: .3)),
                 ],
               ),
@@ -66,9 +72,9 @@ Widget userList(
         ),
         Center(
           child: Container(
-              width: 50,
-              height: 50,
-              margin: const EdgeInsets.only(left: 15),
+              width: 60,
+              height: 60,
+              margin: const EdgeInsets.only(left: 5),
               // child: Text('image'
               child: Image.network("https://picsum.photos/200")),
         ),

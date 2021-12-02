@@ -2,29 +2,27 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:watchlist_bloc_lib/bloc/watchlist_bloc.dart';
 import 'package:watchlist_bloc_lib/screen/tab_bar.dart';
+import 'package:watchlist_bloc_lib/src/string.dart';
 import 'service/contactrespo.dart';
 
-void main() => runApp(const MyApp());
+void main() => runApp(const HomePage());
 
-class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
 
   @override
-  State<MyApp> createState() => _MyAppState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: Strings.appTitle,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: BlocProvider(
-        create: (context) => WatchlistBloc(ContactService()),
-        child: const TabBarScreen(),
-      ),
+      home: const TabBarScreen(),
     );
   }
 }
